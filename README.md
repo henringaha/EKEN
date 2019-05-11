@@ -1,5 +1,5 @@
 # EKEM 
-## EKEN-TRIP 
+## Wissensdomäne: TRIP 
 ## I. Graph-Beschreibung
 Es gibt eine Reihe von Gründen, einen Ausflug zu unternehmen. Diese Gründe Können persönlich oder im Zusammenhang mit der beruflichen Tätigkeit stehen.Es ist jedoch unerlässlich, dass die Person oder die Organisation, die diese Dienstleistung bereitstellt, im Voraus die Ziele („Destination“) festlegt, an denen den Ausflug stattfinden soll, um den reibungslosen Ablauf zu gewährleisten. Daher können die nachfolgenden Ziele aufgelistet werden:
 - Städte (z.B. Berlin);
@@ -8,6 +8,7 @@ Es gibt eine Reihe von Gründen, einen Ausflug zu unternehmen. Diese Gründe Kö
 
 Nach der Auswahl der Arte und des Ziels des Ausfluges, ist es auch wichtig zu bestimmen und festzustellen, ob der Ausflug an einem Tag oder über mehrere Tage durchgeführt werden soll.  Alle diese Informationen können in einem RDF-Graph zusammengefasst werden.
 
+## CmapTool-Visualisierung
  ![alt text]( )
  
  
