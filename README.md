@@ -10,6 +10,7 @@ Nach der Auswahl der Arte und des Ziels des Ausfluges, ist es auch wichtig zu be
 
 ## CmapTool-Visualisierung
 ![RDF_GRAPH_TRIP](https://user-images.githubusercontent.com/50373209/57577806-a6d29d00-747f-11e9-9619-dde82a4bfbab.png)
+[RDF-Graph eines Ausflugs mit CMap-Tool.pdf](https://github.com/henringaha/EKEN/files/3169733/RDF-Graph.eines.Ausflugs.mit.CMap-Tool.pdf)
 
 #### Schwachstelle des Graphs
 Im Folgende werden einige Schwachstellen des oben dargestellten RDF-Graphs erwähnt:
