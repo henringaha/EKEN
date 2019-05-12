@@ -23,4 +23,4 @@ Im Vergleich zum obigen Schema bietet dieses Diagramm eine klarere und detaillie
 ![RDF_GRAPH_TRIP ](https://user-images.githubusercontent.com/50373209/57577917-1d709a00-7482-11e9-8699-5638776fb9df.png)
 [RDF-Graph eines Ausflugs mit WebVOWL.pdf](https://github.com/henringaha/EKEN/files/3169735/RDF-Graph.eines.Ausflugs.mit.WebVOWL.pdf)
 
-## IV. RDF-Serialisierung
+ 
