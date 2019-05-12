@@ -21,3 +21,4 @@ Im Folgende werden einige Schwachstellen des oben dargestellten RDF-Graphs erwä
 Im Vergleich zum obigen Schema bietet dieses Diagramm eine klarere und detailliertere Version der betrachteten Domäne, was deren Analyse erleichtert.
 
  ![alt text]( )
+[RDF-Graph eines Ausflugs mit WebVOWL.pdf](https://github.com/henringaha/EKEN/files/3169735/RDF-Graph.eines.Ausflugs.mit.WebVOWL.pdf)
