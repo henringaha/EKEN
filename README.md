@@ -9,10 +9,8 @@ Es gibt eine Reihe von Gründen, einen Ausflug zu unternehmen. Diese Gründe Kö
 Nach der Auswahl der Arte und des Ziels des Ausfluges, ist es auch wichtig zu bestimmen und festzustellen, ob der Ausflug an einem Tag oder über mehrere Tage durchgeführt werden soll.  Alle diese Informationen können in einem RDF-Graph zusammengefasst werden.
 
 ## CmapTool-Visualisierung
- ![alt text]( )
+  ![TRIP_SS_2019](https://user-images.githubusercontent.com/50373209/57577738-fc0daf00-747d-11e9-875f-64bb39565656.png)
  
- 
-
 #### Schwachstelle des Graphs
 Im Folgende werden einige Schwachstellen des oben dargestellten RDF-Graphs erwähnt:
 * Die Elemente, aus denen „ItemList“ oder „reason“ besteht, sind nicht erschöpfend dargestellt. 
