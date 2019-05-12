@@ -1,14 +1,14 @@
 # EKEM 
 ## Wissensdomäne: TRIP 
 ## I. Graph-Beschreibung
-Es gibt eine Reihe von Gründen, einen Ausflug zu unternehmen. Diese Gründe Können persönlich oder im Zusammenhang mit der beruflichen Tätigkeit stehen.Es ist jedoch unerlässlich, dass die Person oder die Organisation, die diese Dienstleistung bereitstellt, im Voraus die Ziele („Destination“) festlegt, an denen den Ausflug stattfinden soll, um den reibungslosen Ablauf zu gewährleisten. Daher können die nachfolgenden Ziele aufgelistet werden:
+Es gibt eine Reihe von Gründen, einen Ausflug zu unternehmen. Diese Gründe Können persönlich oder im Zusammenhang mit der beruflichen Tätigkeit stehen. Es ist jedoch wichtig, dass die Person oder Organisation, die den Dienst anbietet, dem Nutzer die Möglichkeit gibt, eine oder mehrere Entscheidungen über die angebotenen Ziele zu treffen. Daher können die nachfolgenden Ziele aufgelistet werden:
 - Städte (z.B. Berlin);
 - Historische Gebäude oder Denkmale (z.B. Berliner Mauer);
 - Administrative Bereiche (z.B. den deutschen Bundestag).
 
 Nach der Auswahl der Arte und des Ziels des Ausfluges, ist es auch wichtig zu bestimmen und festzustellen, ob der Ausflug an einem Tag oder über mehrere Tage durchgeführt werden soll.  Alle diese Informationen können in einem RDF-Graph zusammengefasst werden.
 
-## CmapTool-Visualisierung
+## II. CmapTool-Visualisierung
 ![RDF_GRAPH_TRIP](https://user-images.githubusercontent.com/50373209/57577806-a6d29d00-747f-11e9-9619-dde82a4bfbab.png)
 [RDF-Graph eines Ausflugs mit CMap-Tool.pdf](https://github.com/henringaha/EKEN/files/3169733/RDF-Graph.eines.Ausflugs.mit.CMap-Tool.pdf)
 
