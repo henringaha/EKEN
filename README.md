@@ -8,7 +8,7 @@ Es gibt eine Reihe von Gründen, einen Ausflug zu unternehmen. Diese Gründe Kö
 
 Nach der Auswahl der Arte und des Ziels des Ausfluges, ist es auch wichtig zu bestimmen und festzustellen, ob der Ausflug an einem Tag oder über mehrere Tage durchgeführt werden soll.  Alle diese Informationen können in einem RDF-Graph zusammengefasst werden.
 
-## II. Faktennetz: CmapTool-Visualisierung
+## II. Faktennetz: CmapTool
 ![RDF_GRAPH_TRIP](https://user-images.githubusercontent.com/50373209/57577806-a6d29d00-747f-11e9-9619-dde82a4bfbab.png)
 [RDF-Graph eines Ausflugs mit CMap-Tool.pdf](https://github.com/henringaha/EKEN/files/3169733/RDF-Graph.eines.Ausflugs.mit.CMap-Tool.pdf)
 
@@ -17,7 +17,7 @@ Im Folgende werden einige Schwachstellen des oben dargestellten RDF-Graphs erwä
 * Die Elemente, aus denen „ItemList“ oder „reason“ besteht, sind nicht erschöpfend dargestellt. 
 * Um der Graph übersichtlich darzustellen, wurden nicht alle „Properties“ bzw. Relationen dargestellt.
 
-## III. Faktennetz: WebVOWL-Visualisierung
+## III. Faktennetz: WebVOWL
 
 ![RDF_GRAPH_TRIP ](https://user-images.githubusercontent.com/50373209/57577917-1d709a00-7482-11e9-8699-5638776fb9df.png)
 [RDF-Graph eines Ausflugs mit WebVOWL.pdf](https://github.com/henringaha/EKEN/files/3169735/RDF-Graph.eines.Ausflugs.mit.WebVOWL.pdf)
