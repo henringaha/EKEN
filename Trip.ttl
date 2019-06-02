@@ -264,6 +264,106 @@ schema:streetAddress a owl:DatatypeProperty ;
 			rdfs:range schema:Text ;
 			rdfs:isDefinedBy <https://schema.org/> .	
 
+#####.........#######
+trip:BerlinFair a schema:Flight;
+     schema:name "VW Annual General Meeting";
+     schema:provider "Messe-Berlin";
+     schema:reason "Business";
+     schema:departureTime "06:30:00";
+     schema:arrivalTime "08:45:00";
+     schema:itinerary "City";
+     schema:trip "https://www.messe-berlin.de".
+
+
+trip:BerlinFair a schema:Flight;
+     schema:name "Werkstattmesse 2019";
+     schema:provider "Messe-Berlin";
+     schema:departureTime "07:30:00";
+     schema:arrivalTime "08:45:00";
+     schema:itinerary "City";
+     schema:trip "https://www.messe-berlin.de";
+     schema:reason "Business".
+
+trip:BerlinFair a schema:Flight;
+     schema:name "Ordentliche Hauptversammlung der DAIMLERAG";
+     schema:provider "Messe-Berlin";
+     schema:departureTime "08:00:00";
+     schema:arrivalTime "08:45:00";
+     schema:itinerary "City";
+     schema:trip "https://www.messe-berlin.de";
+     schema:reason "Business".
+
+trip:Pyramiden a schema:TouristTrip;
+     schema:name "Gizeh";
+     schema:provider "Reisereporter";
+     schema:reason "Personal";
+     schema:itinerary "HistoricalBuildings";
+     schema:departureTime "13:00:00";
+     schema:arrivalTime "06:30:00";
+     schema:trip "https://www.reisereporter.de".
+
+trip:BerlinerTour a schema:BusTrip;
+     schema:name "BigTour";
+     schema:provider "Ripadvisor";
+     schema:reason "Personal";
+     schema:itinerary "City";
+     schema:departureTime "12:00:00";
+     schema:arrivalTime "13:00:00";
+     schema:trip "https://www.tripadvisor.de".
+
+trip:Discovery  a schema:BusTrip;
+     schema:name "Berlinermauer";
+     schema:provider "Germany-Travel";
+     schema:reason "Personal";
+     schema:itinerary "HistoricalBuildings";
+     schema:arrivalTime "07:15:00";
+     schema:departureTime "05:00:00";
+     schema:trip "https://www.germany.travel/de/index.html".
+
+trip:ParlementTour a schema:TouristTrip;
+     schema:name "Deutscher Bundestag";
+     schema:provider "Berlin-4d";
+     schema:reason "Personal";
+     schema:itinerary "AdministrativeArea";
+     schema:departureTime "08:00:00";
+     schema:arrivalTime "09:00:00";
+     schema:trip "https://de.wikipedia.org/wiki/Deutscher_Bundestag".
+
+trip:WindsorTour a schema:TouristTrip;
+     schema:name "Windsor Palace";
+     schema:provider "Ripadvisor";
+     schema:reason "Personal";
+     schema:itinerary "AdministrativeArea";
+     schema:departureTime "08:00:00";
+     schema:arrivalTime "13:00:00";
+     schema:trip "https://de.wikipedia.org/wiki/windsor".
+
+trip:Edinburgh a schema:BusTrip;
+     schema:name "CityTour";
+     schema:provider "Germany-Travel";
+     schema:reason "Personal";
+     schema:itinerary "City";
+     schema:departureTime "08:00:00";
+     schema:arrivalTime "10:00:00";
+     schema:trip "hhttps://en.wikipedia.org/wiki/Edinburgh".
+
+trip:OxfordTour a schema:TrainTrip;
+     schema:name "Oxford";
+     schema:provider "University of Oxford";
+     schema:reason "Personal";
+     schema:itinerary "City";
+     schema:departureTime "07:00:00";
+     schema:arrivalTime "09:00:00";
+     schema:trip "https://en.wikipedia.org/wiki/Oxford".
+
+trip:StonehengeTour a schema:BusTrip;
+     schema:name "CityTour";
+     schema:provider "Visasunited";
+     schema:reason "Personal";
+     schema:itinerary "HistoricalBuildings";
+     schema:departureTime "06:00:00";
+     schema:arrivalTime "07:00:00";
+     schema:trip "https://en.wikipedia.org/wiki/Stonehenge".
 
 
 
