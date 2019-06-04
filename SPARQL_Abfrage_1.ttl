@@ -1,5 +1,5 @@
-### Aus persönlichen Gründen möchte eine Gruppe von Touristen historische Denkmale 
-     besuchen und dafür möchte sie vor allem die Liste dieser Denkmale haben #### 
+### Aus persönlichen Gründen möchte eine Gruppe von Touristen historische Denkmale ###
+### besuchen und dafür möchte sie vor allem die Liste dieser Denkmale haben #### 
 
 
 PREFIX schema: <https://schema.org/>
