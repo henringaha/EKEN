@@ -1,0 +1,21 @@
+### Aus persönlichen Gründen möchte eine Gruppe von Touristen historische Denkmale 
+     besuchen und dafür möchte sie vor allem die Liste dieser Denkmale haben #### 
+
+
+PREFIX schema: <https://schema.org/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX trip: <https://bmake.th-brandenburg.de/Trip#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX sc: <http://purl.org/science/owl/sciencecommons/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX ec: <http://eulergui.sourceforge.net/contacts.owl.n3#>
+
+SELECT ?trip   ?name
+
+WHERE {
+  ?trip schema:itinerary"HistoricalBuildings";
+        schema:name ?name.
+                       
+       
+}
+LIMIT 25
