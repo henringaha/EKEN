@@ -10,11 +10,12 @@ PREFIX sc: <http://purl.org/science/owl/sciencecommons/>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX ec: <http://eulergui.sourceforge.net/contacts.owl.n3#>
 
-SELECT ?trip   ?name
+SELECT ?trip   ?name ?reason
 
 WHERE {
   ?trip schema:itinerary"HistoricalBuildings";
-        schema:name ?name.
+        schema:name ?name;
+        schema:reason ?reason.                
                        
        
 }
