@@ -4,7 +4,7 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix trip: <https://bmake.th-brandenburg.de/trip#> .
+@prefix Trip: <https://bmake.th-brandenburg.de/Trip/> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix voaf: <http://purl.org/vocommons/voaf#> .
@@ -24,13 +24,10 @@
 	dcterms:issued "2019-04-16"^^xsd:date ;
 	dcterms:modified "2019-05-05"^^xsd:date ;
 	rdfs:comment "This vocabulary is defined by reusing schema.org classes, relations and attributes. It aims primarily to manage and provide excursions."@en ;
-	owl:versionInfo "v 0.4 - PoC; one proprietary properties for Trip added: personal and business for schema:reason; this refactoring became necessary for technical reasons - more direct reference to specific properties"@en ;; 
+	owl:versionInfo "v 0.4 - PoC; one proprietary properties for Trip added: personal and business for schema:reason; this refactoring became necessary for technical reasons - more direct reference to specific properties"@en ;
 	schema:license <http://creativecommons.org/licenses/by/3.0/> ;
 	skos:prefLabel "Trip"@en . 
 
-voaf:Vocabulary a owl:Class;
-	rdfs:label "Vocabulary";
-	rdfs:subClassOf schema:Intangible .
 
 <https://www.linkedin.com/in/henri-joel-ngaha-574a9313a/> a schema:Person ;
 			schema:name "Henri J. Ngaha" ;
@@ -113,68 +110,68 @@ schema:BusTrip a owl:Class ;
 			
 ### Definition of spv-specific Classes ### 
 
-trip:City a owl:Class ;
+Trip:City a schema:itinerary ;
             rdfs:label "City"@en, "Stadt"@de ;
 			rdfs:comment "Class for ItemList, this is an attractive (small or large) city which one can visit"@en, "Klasse für ItemList, das sind die attraktiven (Klein- oder Großstädte), die man besuchen kann"@de ;
-			rdfs:subClassOf schema:ItemList ;
-			rdfs:isDefinedBy <https://schema.org/> .
+			rdfs:subClassOf schema:ItemList .
+			 
 
-trip:HistoricalBuilding a owl:Class ;
+Trip:HistoricalBuilding a schema:itinerary ;
             rdfs:label "Historical Building"@en, "Historisches Gebäude"@de ;
 			rdfs:comment "Class for ItemList, these are some of the world’s famous historic buildings places, these are also include places of historical importance and projects which have come to epitomise the architectural and engineering achievements of civilization throughout the ages"@en, "Klasse für ItemList, dies sind einige der weltberühmten historischen Baudenkmäler, dazu gehören auch Orte von historischer Bedeutung und Projekte, die im Laufe der Zeit die architektonischen und technischen Errungenschaften der Zivilisation verkörpern"@de ;
-			rdfs:subClassOf schema:ItemList ;
-			rdfs:isDefinedBy <https://schema.org/> .
+			rdfs:subClassOf schema:ItemList .
+			 
 
-trip:AdministraveArea a owl:Class ;
+Trip:AdministraveArea a schema:itinerary ;
             rdfs:label "AdministraveArea"@en, "Verwaltungssitz"@de ;
 			rdfs:comment "Class for ItemList, this describes the administrative headquarters of a country"@en, "Klasse für ItemList, beschreibt den Verwaltungsstandort eines Landes"@de ;
-			rdfs:subClassOf schema:ItemList ;
-			rdfs:isDefinedBy <https://schema.org/> .
+			rdfs:subClassOf schema:ItemList .
+		 
 
-trip:Personal a owl:Class ;
+Trip:Personal a schema:Trip ;
             rdfs:label "Personal"@en, "Privat"@de ;
-			rdfs:comment "Class for ItemList, is used to describe the personal reasons for organizing an excursion"@en, "Klasse für ItemList, wird verwendet, um die persönlichen Gründe für die Planung eines Ausflugs zu beschreiben"@de ;
-			rdfs:subClassOf schema:ItemList ;
-			rdfs:isDefinedBy <https://schema.org/> .
+			rdfs:comment "Class for ItemList, is used to describe the personal reasons for organizing an excursion"@en, "Klasse für ItemList, wird verwendet, um die persönlichen Gründe für die Planung eines Ausflugs zu beschreiben"@de .
+		 
+			 
 
-trip:Business a owl:Class ;
+Trip:Business a schema:Trip;
             rdfs:label "Business"@en, "Beruf"@de ;
-			rdfs:comment "Class for ItemList, is the activity of making one's living or making money by producing or buying and selling products or services"@en, "Klasse für ItemList, ist die Tätigkeit, durch die Herstellung oder den Kauf und Verkauf von Produkten oder Dienstleistungen Geld zu verdienen"@de ;
-			rdfs:subClassOf schema:ItemList ;
-			rdfs:isDefinedBy <https://schema.org/> .
+			rdfs:comment "Class for ItemList, is the activity of making one's living or making money by producing or buying and selling products or services"@en, "Klasse für ItemList, ist die Tätigkeit, durch die Herstellung oder den Kauf und Verkauf von Produkten oder Dienstleistungen Geld zu verdienen"@de .
+			 
+			
 
 
 ### Definition of re-used Object properties ###
 
-schema:itinerary a owl:ObjectProperty ;
+schema:itinerary a schema:ItemList ;
 			rdfs:label "itinerary"@en ;
 			rdfs:comment "Wird verwendet, um den Zielort des Ausflugs anzugeben"@de ;
 			rdfs:domain schema:Trip;
 			rdfs:range schema:ItemList ;
 			rdfs:isDefinedBy <https://schema.org/> .
 
-schema:provider a owl:ObjectProperty ;
+schema:provider a schema:Organization ;
 			rdfs:label "provider"@en ;
 			rdfs:comment "Wird verwendet, um zu beschreiben, die Person oder die Organisation, die den Ausflug initiiert oder durchführt"@de ;
 			rdfs:domain schema:Trip;
 			rdfs:range [owl:unionOf (schema:Person schema:Organisation)] ;
 			rdfs:isDefinedBy <https://schema.org/> .
 
-schema:partOfTrip a owl:ObjectProperty ;
+schema:partOfTrip a schema:Trip ;
 			rdfs:label "partOfTrip"@en ;
 			rdfs:comment "Wird verwendet, um ein mehrtägiger Ausflug mit unterschiedlichen Aktivitäten zu beschrieben"@de ;
 			rdfs:domain schema:Trip;
 			rdfs:range schema:Trip ;
 			rdfs:isDefinedBy <https://schema.org/> .
 
-schema:address a owl:ObjectProperty ;
+schema:address a schema:Organisation ;
 			rdfs:label "address"@en ;
 			rdfs:comment "Wird verwendet, um Personen oder Organisationen eine Adresse zuzuordnen"@de ;
 			rdfs:domain schema:Organisation;
 			rdfs:range schema:PostalAddress ;
 			rdfs:isDefinedBy <https://schema.org/> .
 			
-schema:subjectOf a owl:ObjectProperty ;
+schema:subjectOf a schema:Trip ;
 			rdfs:label "subjectOf"@en ;
 			rdfs:comment "wird verwendet, um ein in CreativeWork dargestelltes Thema zu beschreiben"@de ;
 			rdfs:domain schema:Trip;
@@ -184,187 +181,177 @@ schema:subjectOf a owl:ObjectProperty ;
 			
 ### Definition of specific Object Properties ###			
 
-schema:reason a owl:ObjectProperty ;
+Trip:reason a schema:Tip;
 			rdfs:label "reason"@en ;
 			rdfs:comment "wird verwendet, um die Gründe zu beschreiben, die eine Person motivieren können, einen Ausflug zu unternehmen"@de ;
 			rdfs:domain schema:Trip;
-			rdfs:range [owl:unionOf (schema:Personal schema:Business)] ;
-			rdfs:isDefinedBy <https://schema.org/> .
+			rdfs:range [owl:unionOf (schema:Personal schema:Business)].
+			 
 
 
 ### Datatype Properties ###
 
-schema:name a owl:DatatypeProperty ;
+schema:name a schema:Organization ;
 			rdfs:label "name"@en, "Bezeichnung"@de ;
 			rdfs:comment "General datatype property, potentially usable for names of all localities"@en, "Wird hauptsächlich für die Stadtbezeichnung verwendet; in denen den Ausflug stattfinden wird"@de ;
 			rdfs:domain schema:PostalAddress ;
 			rdfs:range schema:Text ;
 			rdfs:isDefinedBy <https://schema.org/> .
 
-schema:email a owl:DatatypeProperty ;
+schema:email a schema:Organization ;
 			rdfs:label "email"@en, "E-Mail"@de ;
 			rdfs:comment "the email of a person"@en, "E-Mail-Adresse einer Person"@de ;
 			rdfs:domain schema:Person ;
 			rdfs:range schema:Text ;
 			rdfs:isDefinedBy <https://schema.org/> .	
 			
-schema:legalName a owl:DatatypeProperty ;
+schema:legalName a schema:Organization ;
 			rdfs:label "legal name"@en, "offizielle Bezeichnung"@de ;
 			rdfs:comment "is used to specify an official name of an organization"@en, "wird verwendet, um die offizielle Bezeichnung einer Organisation zu erklären"@de ;
 			rdfs:domain schema:Organization ;
 			rdfs:range schema:Text ;
 			rdfs:isDefinedBy <https://schema.org/> .
 
-schema:url a owl:DatatypeProperty ;
+schema:url a schema:Organisation;
 			rdfs:label "url"@en, "URL"@de ;
 			rdfs:comment "General datatype property, potentially usable for specifying the URL of a resource"@en, "allgemeines Attribut zur eindeutigen Referenz bzw. zur Bereitstellung weiterführender Informationen zu einer Ressource"@de ;
 			rdfs:domain schema:Organization ;
 			rdfs:range schema:URL ;
 			rdfs:isDefinedBy <https://schema.org/> .
 			
-schema:gender a owl:DatatypeProperty ;
+schema:gender a schema:Person ;
 			rdfs:label "gender"@en, "Geschlecht"@de ;
 			rdfs:comment "the gender of a Person"@en, "das Geschlecht einer Person"@de ;
 			rdfs:domain schema:Person ;
 			rdfs:range schema:Text ;
 			rdfs:isDefinedBy <https://schema.org/> .
 
-schema:jobTitle a owl:DatatypeProperty ;
+schema:jobTitle a schema:Person ;
 			rdfs:label "jobTitle"@en, "Geschlecht"@de ;
 			rdfs:comment "The academic status of a person"@en, "der akademische Grad einer Person"@de ;
 			rdfs:domain schema:Person ;
 			rdfs:range schema:Text ;
 			rdfs:isDefinedBy <https://schema.org/> .
 
-schema:arrivalTime a owl:DatatypeProperty ;
+schema:arrivalTime a schema:Trip ;
 			rdfs:label "arrivalTime"@en, "Ankunftszeit"@de ;
 			rdfs:comment "The expected arrival time"@en, "die voraussichtliche Ankunftszeit"@de ;
 			rdfs:domain schema:Trip ;
 			rdfs:range schema:DateTime ;
 			rdfs:isDefinedBy <https://schema.org/> .
 
-schema:departureTime a owl:DatatypeProperty ;
+schema:departureTime a schema:Trip ;
 			rdfs:label "departureTime"@en, "Abfahrtszeit"@de ;
 			rdfs:comment "The expected departure time"@en, "die voraussichtliche Abfahrtszeit"@de ;
 			rdfs:domain schema:Trip ;
 			rdfs:range schema:DateTime ;
 			rdfs:isDefinedBy <https://schema.org/> .
 
-schema:addressLocality a owl:DatatypeProperty ;
+schema:addressLocality a schema:PostalAddress ;
 			rdfs:label "addressLocality"@en, "Anschrift "@de ;
 			rdfs:comment "is used to describe the locality where the trip is being held"@en, "wird verwendet, um den genauen Ort des Ausflugs zu beschreiben"@de ;
 			rdfs:domain schema:PostalAddress ;
 			rdfs:range schema:Text ;
 			rdfs:isDefinedBy <https://schema.org/> .
 
-schema:streetAddress a owl:DatatypeProperty ;
+schema:streetAddress a schema:PostalAddress  ;
 			rdfs:label "streetAddress"@en, "Straße"@de ;
 			rdfs:comment "The street address of a locality"@en, "die Anschrift einer Stadt oder Gemeinde"@de ;
 			rdfs:domain schema:PostalAddress ;
 			rdfs:range schema:Text ;
 			rdfs:isDefinedBy <https://schema.org/> .	
 
-#####.........#######
-trip:BerlinFair a schema:Flight;
-     schema:name "VW Annual General Meeting";
-     schema:provider "Messe-Berlin";
-     schema:reason "Business";
-     schema:departureTime "06:30:00";
-     schema:arrivalTime "08:45:00";
-     schema:itinerary "City";
-     schema:trip "https://www.messe-berlin.de".
 
+###################################################################
 
-trip:BerlinFair a schema:Flight;
-     schema:name "Werkstattmesse 2019";
-     schema:provider "Messe-Berlin";
-     schema:departureTime "07:30:00";
-     schema:arrivalTime "08:45:00";
-     schema:itinerary "City";
-     schema:trip "https://www.messe-berlin.de";
-     schema:reason "Business".
+Trip:BerlinFair a schema:Flight;
+schema:name "VW Annual General Meeting";
+schema:provider <https://www.messe-berlin.de>;
+schema:reason "Business";
+schema:departureTime "06:30:00";
+schema:arrivalTime "08:45:00";
+schema:itinerary "City".
+ 
+Trip:Flair a schema:Flight;
+schema:name "Werkstattmesse 2019";
+schema:provider <https://www.messe-berlin.de>;
+schema:departureTime "07:30:00";
+schema:arrivalTime "08:45:00";
+schema:itinerary "City";
+ schema:reason "Business".
 
-trip:BerlinFair a schema:Flight;
-     schema:name "Ordentliche Hauptversammlung der DAIMLERAG";
-     schema:provider "Messe-Berlin";
-     schema:departureTime "08:00:00";
-     schema:arrivalTime "08:45:00";
-     schema:itinerary "City";
-     schema:trip "https://www.messe-berlin.de";
-     schema:reason "Business".
+Trip:BerlinFair a schema:Flight;
+schema:name "Ordentliche Hauptversammlung der DAIMLERAG";
+schema:provider <https://www.messe-berlin.de>;
+schema:departureTime "08:00:00";
+schema:arrivalTime "08:45:00";
+schema:itinerary "City";
+schema:reason "Business".
 
-trip:Pyramiden a schema:TouristTrip;
-     schema:name "Gizeh";
-     schema:provider "Reisereporter";
-     schema:reason "Personal";
-     schema:itinerary "HistoricalBuildings";
-     schema:departureTime "13:00:00";
-     schema:arrivalTime "06:30:00";
-     schema:trip "https://www.reisereporter.de".
+Trip:Pyramiden a schema:TouristTrip;
+schema:name "Reisereporter";
+schema:provider <https://www.reisereporter.de>;
+schema:reason "Personal";
+schema:itinerary "HistoricalBuildings";
+schema:departureTime "13:00:00";
+schema:arrivalTime "06:30:00".
+ 
+Trip:BerlinerTour a schema:BusTrip;
+schema:name "Ripadvisor";
+schema:provider <https://www.tripadvisor.de>;
+schema:reason "Personal";
+schema:itinerary "City";
+schema:departureTime "12:00:00";
+schema:arrivalTime "13:00:00".
+ 
+Trip:Discovery  a schema:BusTrip;
+schema:name "Berlinermauer";
+schema:provider <https://www.germany.travel/de/index.html>;
+schema:reason "Personal";
+schema:itinerary "HistoricalBuildings";
+schema:arrivalTime "07:15:00";
+schema:departureTime "05:00:00".
 
-trip:BerlinerTour a schema:BusTrip;
-     schema:name "BigTour";
-     schema:provider "Ripadvisor";
-     schema:reason "Personal";
-     schema:itinerary "City";
-     schema:departureTime "12:00:00";
-     schema:arrivalTime "13:00:00";
-     schema:trip "https://www.tripadvisor.de".
+Trip:ParlementTour a schema:TouristTrip;
+schema:name "Deutscher Bundestag";
+schema:provider <https://de.wikipedia.org/wiki/Deutscher_Bundestag>;
+schema:reason "Personal";
+schema:itinerary "AdministrativeArea";
+schema:departureTime "08:00:00";
+schema:arrivalTime "09:00:00".
+ 
+Trip:WindsorTour a schema:TouristTrip;
+schema:name "Ripadvisor";
+schema:provider <https://de.wikipedia.org/wiki/windsor>;
+schema:reason "Personal";
+schema:itinerary "AdministrativeArea";
+schema:departureTime "08:00:00";
+schema:arrivalTime "13:00:00".
+ 
+Trip:Edinburgh a schema:BusTrip;
+schema:name "Germany-Travel";
+schema:provider <hhttps://en.wikipedia.org/wiki/Edinburgh>;
+schema:reason "Personal";
+schema:itinerary "City";
+schema:departureTime "08:00:00";
+schema:arrivalTime "10:00:00".
+ 
+Trip:OxfordTour a schema:TrainTrip;
+schema:name "University of Oxford";
+schema:provider <https://en.wikipedia.org/wiki/Oxford>;
+schema:reason "Personal";
+schema:itinerary "City";
+schema:departureTime "07:00:00";
+schema:arrivalTime "09:00:00".
 
-trip:Discovery  a schema:BusTrip;
-     schema:name "Berlinermauer";
-     schema:provider "Germany-Travel";
-     schema:reason "Personal";
-     schema:itinerary "HistoricalBuildings";
-     schema:arrivalTime "07:15:00";
-     schema:departureTime "05:00:00";
-     schema:trip "https://www.germany.travel/de/index.html".
-
-trip:ParlementTour a schema:TouristTrip;
-     schema:name "Deutscher Bundestag";
-     schema:provider "Berlin-4d";
-     schema:reason "Personal";
-     schema:itinerary "AdministrativeArea";
-     schema:departureTime "08:00:00";
-     schema:arrivalTime "09:00:00";
-     schema:trip "https://de.wikipedia.org/wiki/Deutscher_Bundestag".
-
-trip:WindsorTour a schema:TouristTrip;
-     schema:name "Windsor Palace";
-     schema:provider "Ripadvisor";
-     schema:reason "Personal";
-     schema:itinerary "AdministrativeArea";
-     schema:departureTime "08:00:00";
-     schema:arrivalTime "13:00:00";
-     schema:trip "https://de.wikipedia.org/wiki/windsor".
-
-trip:Edinburgh a schema:BusTrip;
-     schema:name "CityTour";
-     schema:provider "Germany-Travel";
-     schema:reason "Personal";
-     schema:itinerary "City";
-     schema:departureTime "08:00:00";
-     schema:arrivalTime "10:00:00";
-     schema:trip "hhttps://en.wikipedia.org/wiki/Edinburgh".
-
-trip:OxfordTour a schema:TrainTrip;
-     schema:name "Oxford";
-     schema:provider "University of Oxford";
-     schema:reason "Personal";
-     schema:itinerary "City";
-     schema:departureTime "07:00:00";
-     schema:arrivalTime "09:00:00";
-     schema:trip "https://en.wikipedia.org/wiki/Oxford".
-
-trip:StonehengeTour a schema:BusTrip;
-     schema:name "CityTour";
-     schema:provider "Visasunited";
-     schema:reason "Personal";
-     schema:itinerary "HistoricalBuildings";
-     schema:departureTime "06:00:00";
-     schema:arrivalTime "07:00:00";
-     schema:trip "https://en.wikipedia.org/wiki/Stonehenge".
-
+Trip:StonehengeTour a schema:BusTrip;
+schema:name "Visasunited";
+schema:provider <https://en.wikipedia.org/wiki/Stonehenge>;
+schema:reason "Personal";
+schema:itinerary "HistoricalBuildings";
+schema:departureTime "06:00:00";
+schema:arrivalTime "07:00:00".
+ 
 
 
 
