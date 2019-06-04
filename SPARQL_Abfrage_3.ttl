@@ -1,5 +1,7 @@
 ### Die Gruppe möchte dorthin fahren, benötigt aber Informationen über die Abfahrts- ###
 ### und Ankunftszeiten der einzelnen Busreisezentrum ###
+
+
 PREFIX schema: <https://schema.org/>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX trip: <https://bmake.th-brandenburg.de/Trip#>
