@@ -1,5 +1,5 @@
-### Die Gruppe möchte dorthin fahren, benötigt aber Informationen über die Abfahrts- ###
-### und Ankunftszeiten der einzelnen Busreisezentrum ###
+### zusätlich möchte die Gruppe mit Bus dorthin fahren und sie benötigt Informationen über die Abfahrtszeiten,###
+### Ankunftszeiten und den Name jedes einzelnen Busreisezentrums ###
 
 
 PREFIX schema: <https://schema.org/>
@@ -10,13 +10,17 @@ PREFIX sc: <http://purl.org/science/owl/sciencecommons/>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX ec: <http://eulergui.sourceforge.net/contacts.owl.n3#>
 
-SELECT ?trip  ?provider ?departureTime ?arrivalTime 
+SELECT ?trip  ?provider ?name ?reason ?departureTime ?arrivalTime
 
 WHERE {
- ?trip a schema:BusTrip;
+  {?trip schema:itinerary"HistoricalBuildings";
+        schema:name ?name;
+        schema:provider ?provider;
+        schema:reason ?reason.}
+ 
+UNION {?trip a schema:BusTrip;
         schema:departureTime ?departureTime;
         schema:arrivalTime ?arrivalTime;
-        schema:provider ?provider.
+        schema:provider ?provider.}
 }
-  
 LIMIT 25
